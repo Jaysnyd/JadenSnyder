@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Game
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Fugaz One' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <!-- HEADER AND SCORE BOARD  -->
+        <div class="container-1">
+            <div class="rps">
+                <h1>ROCK</h1>
+                <h1>PAPER</h1>
+                <h1>SCISSORS!</h1>
+            </div>
+            <div class="score-card">
+                <div id="score-board" class="score" id="score">0</div>
+                <div class="label">SCORE</div>
+            </div>
+        </div>
+        <!-- USER CHOICES  -->
+        <div class="container-2">
+            <div class="choices">
+                <img onclick="playGame('rock')" id="rock" src="Images/rock.PNG" alt="Hand symbol for rock">
+                <h2>ROCK</h2>
+            </div>
+            <div class="choices">
+                <img onclick="playGame('paper')" id="paper" src="Images/paper.PNG" alt="Hand symbol for paper">
+                <h2>PAPER</h2>
+            </div>
+            <div class="choices">
+                <img onclick="playGame('scissors')" id="scissors" src="Images/scissors.PNG" alt="Hand symbol for scissors">
+                <h2>SCISSORS</h2>
+            </div>
+        </div>
+
+        <!-- WINNER / LOSER  -->
+         <div class="container-3">
+            <div id="resultDisplay">YOU WIN!</div>
+
+            <div id="you-chose">
+                <h3 id="playerDisplay">PLAYER: </h3>
+                <h3 id="computerDisplay">COMPUTER: </h3>
+            </div>
+
+            <!-- RESET GAME TO 0  -->
+            <div id="reset">
+                <button onclick="resetGame()">RESET GAME</button>
+            </div>
+         </div>
+    </div>
 </body>
 </html>

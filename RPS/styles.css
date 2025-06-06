@@ -1,3 +1,135 @@
 * {
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 26px;
+    font-family: 'Fugaz One', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.wrapper {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 1st Container (RPS - SCORE)  */
+.container-1 {
+    background-color: black;
+    color: white;
+    width: 50%;
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: white;
+    color: black;
+    width: 35%;
+    border-radius: 12px;
+}
+
+.score {
+    font-size: 90px;
+    font-family: sans-serif;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    background-color: #247BD1;
+    color: white;
+    width: 100%;
+    border-radius: 0px 0px 12px 12px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+
+/* 2nd Container - User Choices  */
+.container-2 {
+    background-color: #247BD1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 700px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.choices img {
+    margin: 15px;
+    height: 180px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+
+/* 3rd Container - Win/Lose, YouChose/ComputerChose, Reset game  */
+.container-3{
+    color: white;
+    margin: 30px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultDisplay{
+    font-size: 1.7rem;
+}
+
+#you-chose {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#playerDisplay{
+    width: 50%;
+}
+
+
+/* Classes to change Win/Lose color  */
+greenText{
+    color: green;
+}
+
+redText{
+    color: red;
 }
