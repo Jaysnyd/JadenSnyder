@@ -32,4 +32,8 @@ function playGame(playerChoice){
             break;
     }
 }
+
+// Display choices
+// Change win case to red or green based on scenario, switch case...
+// Configure reset button to wipe scoreboard, choices, and win case
 }
