@@ -1,5 +1,5 @@
 // Variables 
-const choices = ["rock", "paper", "scissors"];
+const choices = ["Rock", "Paper", "Scissors"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
@@ -8,7 +8,6 @@ let playerScore = 0;
 let computerScore = 0;
 
 function playGame(playerChoice){
-    console.log(playerChoice);
 
     //Get computer choice
     const computerChoice = choices[Math.floor(Math.random() * 3)];
@@ -21,19 +20,52 @@ function playGame(playerChoice){
     }
     else{
         switch(playerChoice){
-        case "rock":
-            result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
+        case "Rock":
+            result = (computerChoice === "Scissors") ? "YOU WIN!" : "YOU LOSE!";
             break;
-        case "paper":
-            result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
+        case "Paper":
+            result = (computerChoice === "Rock") ? "YOU WIN!" : "YOU LOSE!";
             break;
-        case "scissors":
-            result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
+        case "Scissors":
+            result = (computerChoice === "Paper") ? "YOU WIN!" : "YOU LOSE!";
             break;
     }
 }
 
-// Display choices
-// Change win case to red or green based on scenario, switch case...
-// Configure reset button to wipe scoreboard, choices, and win case
+
+// Display choices and result
+playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+resultDisplay.textContent = result;
+
+//Remove text color and win/lose result classes
+resultDisplay.classList.remove("greenText", "redText", "hideResult");
+
+// Change win case color, Update Scoreboard if player wins
+switch(result){
+    case "YOU WIN!":
+        resultDisplay.setAttribute("class", "greenText");
+        playerScore++;
+        scoreBoard.textContent = playerScore;
+        break;
+    case "YOU LOSE!":
+        resultDisplay.setAttribute("class", "redText");
+        break;
+    case "IT'S A TIE!":
+        resultDisplay.color = "white";
+        break;
+}
+}
+
+function resetGame(){
+    // Reset Scoreboard
+    playerScore = 0;
+    scoreBoard.textContent = playerScore;
+
+    //Hide win/lose case
+    resultDisplay.setAttribute("class", "hideResult");
+
+    // Reset User/Comp choices
+    playerDisplay.textContent = "PLAYER: ";
+    computerDisplay.textContent = "COMPUTER: ";
 }

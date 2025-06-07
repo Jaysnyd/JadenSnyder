@@ -100,7 +100,7 @@ img:hover {
 .container-3{
     color: white;
     margin: 30px;
-    width: 500px;
+    width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,16 +120,35 @@ img:hover {
     gap: 20px;
 }
 
+#you-chose h3{
+    width: auto;
+}
+
 #playerDisplay{
     width: 50%;
 }
 
+/* Reset Button  */
+#reset button {
+    background-color: #247BD1;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
 
 /* Classes to change Win/Lose color  */
-greenText{
+.greenText{
     color: green;
 }
 
-redText{
+.redText{
     color: red;
+}
+
+.hideResult{
+    display: none;
 }
