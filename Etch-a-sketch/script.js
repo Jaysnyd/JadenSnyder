@@ -2,30 +2,20 @@ const grid = document.getElementById("grid-container");
 const tools = document.getElementById("tools-container");
 
 const gridSize = 500;
-let rows = 5;
-let cols = 5;
+let rows = 50;
+let cols = 50;
 
-function createGrid() {
-  for (let i = 0; i < rows * cols; i++) {
-    const cell = document.createElement("div");
+//////////////////////////////////////////////////////////////////////////
+// Intitiate Grid with 16x16 layout
+// Default black color
 
-    cell.style.width = `${gridSize / cols - 2}px`;
-    cell.style.height = `${gridSize / rows - 2}px`;
-    cell.classList.add("cell");
+// GRID SIZE - Prompt user to enter grid prefered grid size
+// Must be x >= 5 and x <= 100
 
-    grid.appendChild(cell);
+// SOLID BLACK COLOR
 
-    //Add event listener when hovering divs to change color - Calls another function to change the color
-  }
-}
+// RAINBOW COLOR (RGB Random)
 
-// Initiate Grid
-createGrid();
+// SHADE COLOR (Progressively get darker until black)
 
-//Function to change size of grid
-
-//Function to change color (Solid black, RGB, or Color picker)
-
-// Function to clear board
-
-// Function to erase board
+// CLEAR CANVAS

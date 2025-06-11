@@ -17,11 +17,17 @@
   <body>
     <h1 class="header">Etch-a-Sketch</h1>
     <div id="wrapper">
+      <!-- Tools  -->
+      <div id="tools-container">
+        <button onclick="changeGridSize()" id="change-grid">Grid Size</button>
+        <button onclick="colorBlack()" id="color-black">Solid Black</button>
+        <button onclick="colorRainbow()" id="rainbow">Rainbow</button>
+        <button onclick="shade()" id="shade">Shade</button>
+        <button onclick="clearCanvas()" id="clear">Clear Canvas</button>
+      </div>
+
       <!-- Grid Container  -->
       <div id="grid-container"></div>
-
-      <!-- Tools  -->
-      <div id="tools-container"></div>
     </div>
     <script src="script.js"></script>
   </body>
