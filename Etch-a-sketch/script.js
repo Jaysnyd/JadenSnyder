@@ -1,15 +1,10 @@
 const grid = document.getElementById("grid-container");
 const tools = document.getElementById("tools-container");
 
-const gridSize = 500;
-let rows = 50;
-let cols = 50;
+const default_color = "#333333";
+const default_size = 16;
 
-//////////////////////////////////////////////////////////////////////////
-// Intitiate Grid with 16x16 layout
-// Default black color
-
-// GRID SIZE - Prompt user to enter grid prefered grid size
+// CHANGE GRID SIZE - Prompt user to enter grid prefered grid size
 // Must be x >= 5 and x <= 100
 
 // SOLID BLACK COLOR
