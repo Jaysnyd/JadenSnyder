@@ -33,6 +33,7 @@ function createBoard(size) {
 
   for (let i = 0; i < numDivs; i++) {
     let div = document.createElement("div");
+    div.classList.add("pixel");
     div.style.backgroundColor = "white";
     // COLOR THE DIV
     div.addEventListener("mouseover", colorDiv);
@@ -56,6 +57,7 @@ function getSize() {
   }
 }
 
+// SET DRAWING COLOR OF GRID
 function colorDiv() {
   if (color == "rainbow") {
     this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
@@ -67,12 +69,13 @@ function colorDiv() {
 function setColor(colorChoice) {
   color = colorChoice;
 }
-// // SOLID BLACK COLOR
-// function solidBlack() {
-//   let blah = prompt("SUPPPPPPPPPP");
-// }
-// RAINBOW COLOR (RGB Random)
-
-// SHADE COLOR (Progressively get darker until black)
 
 // CLEAR CANVAS
+function clearCanvas() {
+  // Grab all 'pixels'/divs - Store in array
+  let divs = document.getElementsByClassName("pixel");
+  // Loop through array
+  for (let i = 0; i < divs.length; i++) {
+    divs[i].style.backgroundColor = "white";
+  }
+}
