@@ -19,15 +19,20 @@
     <div id="wrapper">
       <!-- Tools  -->
       <div id="tools-container">
-        <button onclick="changeGridSize()" id="change-grid">Grid Size</button>
-        <button onclick="colorBlack()" id="color-black">Solid Black</button>
-        <button onclick="colorRainbow()" id="rainbow">Rainbow</button>
+        <button id="change-grid">Grid Size</button>
+        <button onclick="setColor('black')" id="color-black">
+          Solid Black
+        </button>
+        <button onclick="setColor('rainbow')" id="rainbow">Rainbow</button>
         <button onclick="shade()" id="shade">Shade</button>
         <button onclick="clearCanvas()" id="clear">Clear Canvas</button>
       </div>
 
+      <!-- Grid size message  -->
+      <p id="message"></p>
+
       <!-- Grid Container  -->
-      <div id="grid-container"></div>
+      <div id="grid-container" class="board"></div>
     </div>
     <script src="script.js"></script>
   </body>
