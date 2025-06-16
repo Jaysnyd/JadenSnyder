@@ -17,6 +17,9 @@
   <body>
     <h1 class="header">Etch-a-Sketch</h1>
     <div id="wrapper">
+      <p id="instruction">
+        Click Canvas to draw. Click again to pause drawing.
+      </p>
       <!-- Tools  -->
       <div id="tools-container">
         <button id="change-grid">Grid Size</button>
@@ -24,7 +27,6 @@
           Solid Black
         </button>
         <button onclick="setColor('rainbow')" id="rainbow">Rainbow</button>
-        <button onclick="shade()" id="shade">Shade</button>
         <button onclick="clearCanvas()" id="clear">Clear Canvas</button>
       </div>
 

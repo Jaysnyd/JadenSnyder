@@ -34,6 +34,11 @@ body {
   align-items: center;
 }
 
+#instruction {
+  color: white;
+  margin-top: 8px;
+}
+
 #grid-container {
   width: 500px;
   height: 500px;
@@ -61,7 +66,7 @@ body {
 #tools-container button {
   background-color: white;
   color: blue;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 7px;
   border: none;
   font-weight: bold;

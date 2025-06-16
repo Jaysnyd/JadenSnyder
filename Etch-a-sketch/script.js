@@ -1,10 +1,18 @@
 // Global variable for Drawing Color
 let color = "black";
+let click = false;
 
 // INITIALIZATION
 document.addEventListener("DOMContentLoaded", function () {
   // Default Size of board
   createBoard(5);
+
+  //ONLY DRAW WHEN CLICK
+  document.querySelector("body").addEventListener("click", function (e) {
+    if (e.target.tagName != "BUTTON") {
+      click = !click;
+    }
+  });
 
   // User adjusts Size of board
   let changeGridSize = document.querySelector("#change-grid");
@@ -59,10 +67,12 @@ function getSize() {
 
 // SET DRAWING COLOR OF GRID
 function colorDiv() {
-  if (color == "rainbow") {
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-  } else {
-    this.style.backgroundColor = "black";
+  if (click) {
+    if (color == "rainbow") {
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+      this.style.backgroundColor = "black";
+    }
   }
 }
 
