@@ -32,7 +32,7 @@ const getMethod = () => {
 // Perform Calculated Operation
 const operate = () => {
   const method = getMethod();
-  // console.log(method);        RETURNS CORRECT METHOD
+
   if (!method) return; // Checks if method is falsy, reutrn; exits function before going any further
 
   // Split string in display - array of both operands
@@ -47,7 +47,6 @@ const operate = () => {
 
   // Dynamically choose and call function from methods object:
   const ans = methods[method](a, b);
-  // console.log(ans);
 
   // If ans is not a number then Error is used ELSE format ans to 3 decimal places:
   return (display.textContent = isNaN(ans)
